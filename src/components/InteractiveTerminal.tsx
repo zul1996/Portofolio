@@ -18,99 +18,121 @@ const TERMINAL_SCRIPTS: Record<ViewId, TerminalCommand> = {
     lines: [
       'initializing core_kernel...',
       '[██████████████████████] 100%',
-      'identity: Zul (Systems Architect & Engine Dev)',
-      'status: AVAILABLE FOR Q4 2026 CONSULTATION',
-      'core_modules: [zero_boilerplate, monotonic_sec, local_first]',
-      'database: PostgreSQL 16 cluster [ONLINE]',
-      'sentinel: Monotonic watermark active [NO_TAMPER]',
-      'establishing encrypted session...',
-      'ready. Click menu below or type commands to execute.'
+      'identity: Muhammad Zulkarnaen Indranto',
+      'role: Backend Developer & IT Infrastructure Specialist',
+      'proven_track: 4+ Years Enterprise Backend & Systems Engineering',
+      'active_stack: [Kotlin, Spring Boot 3, Kafka, Redis, Docker, Kubernetes]',
+      'database_cluster: PostgreSQL & MySQL [ONLINE]',
+      'major_achievement: Built national BUMN enterprise credit core from scratch',
+      'location: Sidoarjo, Jawa Timur, Indonesia',
+      'status: AVAILABLE FOR HIGH-IMPACT BACKEND ROLES',
+      'ready. Click bottom menu [00-04] or action buttons to inspect.'
     ]
   },
   about: {
     command: 'cat ./career_trajectory.md',
     lines: [
-      'loading professional trajectory & milestones...',
+      'reading professional experience & verified CV...',
       '[██████████████████████] 100%',
-      '====================================================',
-      '● PRINCIPAL SYSTEMS ARCHITECT | Atharis Ecosystem',
-      '  2023 — Present • Hybrid',
-      '  - Designed zero-property decorator metadata engine',
-      '  - Sub-5ms query hydration, eliminated 60% boilerplate',
-      '  - Built pluggable audit sink & multi-tenant RBAC',
-      '----------------------------------------------------',
-      '● SR. BACKEND & INFRA ENGINEER | Distributed Tech Group',
-      '  2021 — 2023 • Jakarta, ID',
-      '  - Engineered high-concurrency payment gateway & Kafka bus',
-      '  - Authored monotonic license sentinel with HMAC challenge',
-      '----------------------------------------------------',
-      '● SOFTWARE SOLUTIONS ENGINEER | CloudCore Systems',
-      '  2018 — 2021 • Remote',
-      '  - Deployed IoT access turnstiles with <120ms relay latency',
-      '====================================================',
-      'proven track record: 8+ years resilient enterprise delivery'
+      '========================================================================',
+      '● PT DWIDASA SAMASARA INDONESIA | Surabaya, ID',
+      '  Jul 2024 — Present • Backend Developer',
+      '  - Jamkrindo System (PT Jaminan Kredit Indonesia):',
+      '    * Built national BUMN core credit guarantee app from scratch',
+      '    * Stack: Kotlin, Spring Boot 3, Kafka, Redis, Docker, Kubernetes',
+      '  - Nexus Platform (Fortress Data Services):',
+      '    * Core financing & credit ops management backend with Kafka streams',
+      '------------------------------------------------------------------------',
+      '● PT FORTRESS DATA SERVICES | Jakarta Pusat, ID',
+      '  Apr 2024 — Jul 2024 • Core Banking Systems Training (Temenos Transact)',
+      '  - Specialized in Temenos Transact modules: Customer Management, Accounts,',
+      '    Teller, Loan Management, General Ledger, T24/jBASE, & FinCloud',
+      '------------------------------------------------------------------------',
+      '● PT BUANA MEGAH PAPER MILLS | Pasuruan, ID',
+      '  Jul 2023 — Apr 2024 • IT Support & Infrastructure',
+      '  - Maintained server hardware, enterprise LAN network & minimized downtime',
+      '------------------------------------------------------------------------',
+      '● PT BEST PROFIT FUTURES | Surabaya, ID',
+      '  Mar 2021 — Aug 2022 • IT Support & Systems',
+      '  - Continuous network support, troubleshooting & company web optimization',
+      '------------------------------------------------------------------------',
+      '● UNIVERSITAS MUHAMMADIYAH SIDOARJO | Sidoarjo, ID',
+      '  Jan 2014 — Dec 2018 • Bachelor Degree in Informatics (GPA 3.49 / 4.00)',
+      '========================================================================',
+      '> verified: 4+ years delivering national-scale resilient systems'
     ]
   },
   skills: {
     command: './inspect_tech_stack.sh --production',
     lines: [
-      'auditing runtime capabilities & dependencies...',
+      'auditing runtime competencies, frameworks & tools...',
       '[██████████████████████] 100%',
-      '[CORE & BACKEND]',
-      '  + Node.js & TypeScript (Strict types, event loop optimization)',
-      '  + Go / Golang (High-throughput daemons & crypto utils)',
-      '  + REST & GraphQL (Stateless contract-first API layers)',
-      '  + Fastify & Express (Low-overhead schema validation)',
-      '[ARCHITECTURE & DATA]',
-      '  + PostgreSQL 16 (JSONB indexing, partitioning, tuning)',
-      '  + TypeORM & Relational SQL (Zero-decorator inference)',
-      '  + Redis (Atomic distributed locks, pub/sub, caches)',
-      '[INFRASTRUCTURE & SECURITY]',
-      '  + Docker & Containerization (Multi-stage builds)',
-      '  + Linux & On-Premises (Systemd service daemons, edge nodes)',
-      '  + Cryptography & Licensing (Monotonic watermarks, HMAC)',
-      '16 core technologies verified in production environments.'
+      '[BACKEND FRAMEWORKS & RUNTIMES]',
+      '  + Kotlin & Spring Boot 3 (Core financing & BUMN enterprise microservices)',
+      '  + Java & C# (Enterprise server services & OOP architectures)',
+      '  + NodeJS, NestJS & ExpressJS (Asynchronous microservices & API gateways)',
+      '  + PHP & Laravel (Modular MVC backends & rapid domain services)',
+      '[DATABASES & MESSAGE BROKERS]',
+      '  + PostgreSQL & MySQL (Complex schemas, JSONB, transaction isolation)',
+      '  + Apache Kafka (High-throughput asynchronous message stream pipelines)',
+      '  + Redis (In-memory caching, atomic distributed locks, rate-limiting)',
+      '  + Microsoft SQL Server (Stored procedures, relational administration)',
+      '[DEVOPS, INFRASTRUCTURE & BANKING]',
+      '  + Docker & Kubernetes (RKE container cluster orchestration)',
+      '  + GitLab CI/CD & Git (Automated regression testing, deployment pipelines)',
+      '  + Linux / Ubuntu (Systemd services, network diagnostics, bash automation)',
+      '  + Temenos Transact (T24/jBASE core banking modules & FinCloud)',
+      '[FRONTEND & DESIGN TOOLS]',
+      '  + TypeScript, JavaScript, HTML5 & Modern CSS',
+      '  + Figma, Photoshop & Illustrator (UI/UX design & vector assets)',
+      '> all competencies production-verified across active projects.'
     ]
   },
   projects: {
     command: 'ls -la ./flagship_projects/ && cat specs.json',
     lines: [
-      'fetching production architecture specifications...',
+      'fetching flagship enterprise system specifications...',
       '[██████████████████████] 100%',
-      '[01] ATHARIS CORE ENGINE (Enterprise Framework)',
-      '     Role: Lead Architect & Engine Developer',
-      '     Stack: TypeScript • TypeORM • PostgreSQL • Docker',
-      '     Metrics: Sub-5ms query hydration, 60% less boilerplate',
-      '     Spec: Zero-property decorator reflection with auto REST/GQL',
-      '----------------------------------------------------',
-      '[02] MONOTONIC LEASE SENTINEL (Security & Licensing)',
-      '     Role: Systems & Security Engineer',
-      '     Stack: Go • PostgreSQL • HMAC-SHA256 • Linux',
-      '     Metrics: 100% offline clock tamper rollback detection',
-      '     Spec: Encrypted relational watermarks + HMAC challenge',
-      '----------------------------------------------------',
-      '[03] PRECISION GYM POS & IOT (Local-First Facility)',
-      '     Role: Full-Stack & Embedded IoT Integrator',
-      '     Stack: React • Fastify • SQLite • MQTT • WebSockets',
-      '     Metrics: <120ms badge-to-gate turnstile relay latency'
+      '[01] JAMKRINDO ENTERPRISE SYSTEM (PT Jaminan Kredit Indonesia)',
+      '     Category: BUMN Core Architecture (National Scale)',
+      '     Role: Core Backend Developer',
+      '     Stack: Kotlin • Spring Boot 3 • Kafka • Redis • Docker • K8s',
+      '     Scope: Built from scratch for nationwide multi-branch credit management',
+      '     Metrics: Zero critical downtime across nationwide branch deployments',
+      '------------------------------------------------------------------------',
+      '[02] NEXUS PLATFORM (Fortress Data Services)',
+      '     Category: Core Financing & Credit Operations',
+      '     Role: Backend Systems Developer',
+      '     Stack: Kotlin • Spring Boot 3 • PostgreSQL • Kafka • Redis • GitLab',
+      '     Scope: High-throughput core financing with sub-second async processing',
+      '     Metrics: Sub-second asynchronous credit stream processing with clean code',
+      '------------------------------------------------------------------------',
+      '[03] ATHARIS MODULAR BUSINESS CORE',
+      '     Category: Framework Architecture & Local-First Licensing',
+      '     Role: Framework Architect & Engine Developer',
+      '     Stack: TypeScript • Node.js • TypeORM • PostgreSQL • Linux',
+      '     Scope: Zero-property decorator metadata inference & monotonic sentinel',
+      '     Metrics: Sub-5ms query hydration, 60% less boilerplate code'
     ]
   },
   contact: {
-    command: './init_contact.sh --address zul@atharis.dev',
+    command: './init_contact.sh --address zul.indranto@gmail.com',
     lines: [
-      'establishing secure comms channel...',
+      'opening direct communication channel...',
       '[██████████████████████] 100%',
-      '----------------------------------------------------',
-      'Primary Email: zul@atharis.dev',
-      'Timezone:      UTC+07:00 (Jakarta, Indonesia)',
-      'Expected SLA:  Within 24 Hours guaranteed',
-      'Scope:         Systems Architecture, Frameworks, Local-First',
-      '----------------------------------------------------',
-      'Verified Direct Channels:',
-      '  [1] GitHub:   https://github.com',
-      '  [2] LinkedIn: https://linkedin.com',
-      '  [3] Telegram: https://t.me',
-      '  [4] Twitter:  https://x.com',
+      '------------------------------------------------------------------------',
+      'Direct Email: zul.indranto@gmail.com',
+      'Location:     Sidoarjo, Jawa Timur, Indonesia',
+      'Timezone:     UTC+07:00 (WIB)',
+      'Response SLA: Within 24 Hours guaranteed',
+      'Scope:        Backend Engineering, Spring Boot, Kotlin, Cloud Infra',
+      '------------------------------------------------------------------------',
+      'Verified Communication & Profile Channels:',
+      '  [1] GitHub:   https://github.com/zul1996',
+      '  [2] LinkedIn: https://www.linkedin.com/in/muhammad-zulkarnaen-indranto/',
+      '  [3] Telegram: https://t.me/zul1996',
+      '  [4] Resume:   /resume.pdf (Available for direct view/download)',
+      '------------------------------------------------------------------------',
       '>> Email address copied to clipboard buffer!'
     ]
   }
@@ -166,9 +188,9 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             if (lineTimer) clearInterval(lineTimer);
             setIsTyping(false);
           }
-        }, 22);
+        }, 18);
       }
-    }, 12);
+    }, 10);
 
     return () => {
       active = false;
@@ -217,11 +239,16 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
       onNavigate('home');
       return;
     }
+    if (cmd.includes('resume') || cmd.includes('pdf')) {
+      window.open('/resume.pdf', '_blank');
+      setDisplayedLines(prev => [...prev, '> Opening /resume.pdf in new tab...']);
+      return;
+    }
 
     setDisplayedLines(prev => [
       ...prev,
       `> ${cmd}`,
-      `command not recognized: "${cmd}". Available: 01_about, 02_stack, 03_projects, 04_contact, clear`
+      `command not recognized: "${cmd}". Available commands: 00_boot, 01_cv, 02_stack, 03_projects, 04_contact, resume, clear`
     ]);
   };
 
@@ -279,7 +306,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="type help, 01, 02, 03, 04, clear..."
+              placeholder="type help, 01, 02, 03, 04, resume, clear..."
               className="terminal-cli-input"
               autoFocus
               spellCheck={false}

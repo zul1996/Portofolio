@@ -1,122 +1,126 @@
 import { PortfolioData } from '../types';
 
 /**
- * PORTFOLIO CONFIGURATION DATA
- * =============================
- * Edit this file to update your personal details, projects, skills, and links.
- * UI components automatically adapt to the content defined here.
+ * PORTFOLIO CONFIGURATION DATA — VERIFIED RESUME (MUHAMMAD ZULKARNAEN INDRANTO)
  */
 export const portfolioData: PortfolioData = {
   personal: {
-    name: "Zul",
-    eyebrow: "IT PROFESSIONAL / SYSTEMS & ARCHITECTURE",
-    title: "Systems Engineer & Framework Architect",
-    headline: "Building reliable systems. Creating useful digital experiences.",
-    subheadline: "Specializing in resilient backend architecture, zero-overhead entity platforms, and mission-critical local-first systems.",
+    name: "Muhammad Zulkarnaen",
+    eyebrow: "IT PROFESSIONAL / BACKEND & INFRASTRUCTURE",
+    title: "Backend Developer & IT Infrastructure Specialist",
+    headline: "Building resilient enterprise backends. Powering national-scale distributed systems.",
+    subheadline: "Over 4 years of proven engineering experience delivering core financing platforms, national state-owned enterprise (BUMN) architectures, and mission-critical cloud infrastructure.",
     status: {
       available: true,
-      label: "Open for high-impact architecture & systems design",
-      subtext: "Q4 2026 / Remote & On-Premises Consultation"
+      label: "Open for High-Impact Backend & Systems Engineering",
+      subtext: "Q4 2026 / Remote & On-Premises Architecture"
     },
-    location: "Indonesia",
+    location: "Sidoarjo, Jawa Timur, Indonesia",
     timezone: "UTC+07:00 (WIB)",
-    email: "zul@atharis.dev"
+    email: "zul.indranto@gmail.com"
   },
 
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    telegram: "https://t.me",
-    twitter: "https://x.com"
+    github: "https://github.com/zul1996",
+    linkedin: "https://www.linkedin.com/in/muhammad-zulkarnaen-indranto/",
+    telegram: "https://t.me/zul1996"
   },
 
   projects: [
     {
-      id: "atharis-core",
-      title: "Atharis Core Engine",
-      category: "Enterprise Framework",
-      summary: "High-throughput modular business core framework with zero-property decorator entity inference and multi-tenant RBAC.",
-      problem: "Traditional enterprise boilerplate requires hundreds of redundant class/field decorators and rigid scaffold layers that slow down vertical domain development.",
-      solution: "Engineered an inference-first metadata registry on top of TypeORM with automated REST/GraphQL grid reflection, dynamic lifecycle hooks, and pluggable event sinks.",
-      role: "Lead Architect & Engine Developer",
-      stack: ["TypeScript", "Node.js", "TypeORM", "PostgreSQL", "Docker"],
+      id: "jamkrindo-core",
+      title: "Jamkrindo Enterprise System (PT Jaminan Kredit Indonesia)",
+      category: "BUMN Core Architecture",
+      summary: "National-scale core credit guarantee and cross-departmental operations system built from scratch for a major Indonesian state-owned enterprise (BUMN).",
+      problem: "Enterprise credit operational management required seamless nationwide inter-departmental collaboration, real-time credit tracking, and zero downtime.",
+      solution: "Engineered robust microservices from scratch using Kotlin and Spring Boot 3, orchestrated with Docker and Kubernetes, backed by Kafka event queues and Redis caches.",
+      role: "Core Backend Developer",
+      stack: ["Kotlin", "Spring Boot 3", "Kafka", "Redis", "Docker", "Kubernetes", "PostgreSQL"],
+      metrics: "Nationwide multi-branch BUMN deployment with zero critical downtime",
+      demoUrl: "https://github.com/zul1996",
+      githubUrl: "https://github.com/zul1996",
+      featured: true
+    },
+    {
+      id: "nexus-fincore",
+      title: "Nexus Platform (Fortress Data Services)",
+      category: "Core Financing & Banking",
+      summary: "High-throughput core financing and credit operational backend platform handling high-volume transactional workflows and asynchronous event messaging.",
+      problem: "Credit financing workflows demand fault-tolerant transactional integrity, structured auditing, and sub-second asynchronous event delivery.",
+      solution: "Implemented high-performance REST APIs and asynchronous message streams with Kafka, Redis, and PostgreSQL, deployed in enterprise Kubernetes clusters.",
+      role: "Backend Systems Developer",
+      stack: ["Kotlin", "Spring Boot 3", "PostgreSQL", "Kafka", "Redis", "GitLab CI/CD"],
+      metrics: "Sub-second asynchronous credit stream processing with structured logging",
+      githubUrl: "https://github.com/zul1996",
+      featured: true
+    },
+    {
+      id: "atharis-framework",
+      title: "Atharis Modular Business Core",
+      category: "Framework Architecture",
+      summary: "Modular enterprise core framework with zero-property decorator metadata inference, tamper-resistant monotonic licensing, and pluggable event sinks.",
+      problem: "Traditional enterprise boilerplate requires redundant decorators and rigid scaffolds that slow down domain feature velocity.",
+      solution: "Architected metadata reflection with TypeORM & PostgreSQL, integrated monotonic watermark validation, and designed pluggable audit sinks.",
+      role: "Framework Architect & Developer",
+      stack: ["TypeScript", "Node.js", "TypeORM", "PostgreSQL", "Docker", "Linux"],
       metrics: "Sub-5ms query hydration, 60% less boilerplate code",
-      githubUrl: "https://github.com",
-      demoUrl: "https://atharis.dev",
-      featured: true
-    },
-    {
-      id: "monotonic-sentinel",
-      title: "Monotonic Lease Sentinel",
-      category: "Security & Licensing",
-      summary: "Tamper-resistant on-premise licensing engine with monotonic clock watermarking and HMAC challenge-response verification.",
-      problem: "Local-first on-premises software is vulnerable to client system clock rollbacks and offline license bypasses without internet connectivity.",
-      solution: "Designed a multi-stage tamper detection system using encrypted write watermarks in relational storage coupled with offline challenge-response QRIS leasing.",
-      role: "Security & Systems Engineer",
-      stack: ["Go", "PostgreSQL", "HMAC-SHA256", "Cryptography", "Linux"],
-      metrics: "100% offline clock-tamper detection with zero false lockouts",
-      githubUrl: "https://github.com",
-      featured: true
-    },
-    {
-      id: "turnstile-access-iot",
-      title: "Precision Gym POS & Access",
-      category: "Local-First & IoT",
-      summary: "Fault-tolerant turnstile access control and membership management engine built for resilient 24/7 offline operation.",
-      problem: "Intermittent network failures at retail facility gates frequently cause customer check-in delays, stalled gates, and revenue leakage.",
-      solution: "Implemented an offline-first distributed node sync protocol with local SQLite edge caches, millisecond RFID badge validation, and asynchronous cloud reconciliation.",
-      role: "Full-Stack & Embedded IoT Integrator",
-      stack: ["React", "Fastify", "SQLite", "WebSockets", "MQTT"],
-      metrics: "< 120ms badge-to-gate relay latency during network outages",
-      demoUrl: "https://atharis.dev/gym",
+      githubUrl: "https://github.com/zul1996",
       featured: true
     }
   ],
 
   about: {
-    lead: "Designing lean, dependable digital infrastructure that stays fast, clear, and easy to reason about.",
+    lead: "Designing scalable, dependable digital backends with Kotlin, Spring Boot, and resilient event-driven architectures.",
     paragraphs: [
-      "I am an IT professional and systems engineer focused on backend foundations, distributed data integrity, and high-performance business applications. My approach favors practical simplicity, smart defaults, and zero-overhead abstractions over trendy complexity.",
-      "Over years of delivering production software, I've designed core frameworks, local-first on-premise software with hardened security, and high-throughput transactional APIs that remain rock-solid under real operational stress."
+      "I am an IT professional with over 4 years of experience specializing in backend engineering and IT infrastructure. I have successfully built and deployed national-scale enterprise systems using Spring Boot for state-owned enterprises (BUMN), running across nationwide branch networks.",
+      "My technical background spans core financing systems, Temenos Transact core banking modules, asynchronous processing with Kafka and Redis, and enterprise container orchestration with Docker and Kubernetes."
     ],
     principles: [
       {
-        title: "Smart Defaults over Boilerplate",
-        description: "Zero-decorator schema inference and clean domain entities eliminate hundreds of lines of fragile scaffolding."
+        title: "Clean Architecture & Structured Reliability",
+        description: "Applying structured logging, clean code principles, and defensive error handling to maximize system uptime and maintainability."
       },
       {
-        title: "Local-First Resiliency",
-        description: "Systems must stay operational even during severe network partition, relying on monotonic watermarks and robust edge sync."
+        title: "Resilient Asynchronous Pipelines",
+        description: "Decoupling critical domain transactions through Kafka event streams and Redis caching to ensure predictable high throughput."
       },
       {
-        title: "Modular Extension Points",
-        description: "Architecture should provide clean pluggable interfaces (like event sinks and audit channels) without premature over-engineering."
+        title: "Enterprise DevOps & Infrastructure",
+        description: "Containerized deployment with Docker, Kubernetes (RKE), and automated GitLab CI/CD pipelines ensuring reproducible releases."
       }
     ],
     experience: [
       {
-        period: "2023 — Present",
-        role: "Principal Systems Architect",
-        company: "Atharis Ecosystem",
-        location: "Hybrid",
-        description: "Spearheaded the core enterprise framework, modular entity metadata engine, and multi-tenant security architecture.",
-        technologies: ["TypeScript", "PostgreSQL", "TypeORM", "Docker", "REST API"]
+        period: "Jul 2024 — Present",
+        role: "Backend Developer",
+        company: "PT Dwidasa Samasara Indonesia",
+        location: "Surabaya, ID",
+        description: "Engineered core financing backend (Nexus Platform) and developed the Jamkrindo BUMN core system from scratch using Kotlin, Spring Boot 3, Kafka, Redis, and Kubernetes.",
+        technologies: ["Kotlin", "Spring Boot 3", "Kafka", "Redis", "PostgreSQL", "Docker", "Kubernetes", "GitLab"]
       },
       {
-        period: "2021 — 2023",
-        role: "Senior Backend & Infrastructure Engineer",
-        company: "Distributed Tech Group",
-        location: "Jakarta, ID",
-        description: "Engineered high-concurrency payment gateways, message bus pipelines, and on-premises licensing protection systems.",
-        technologies: ["Node.js", "Go", "Redis", "Kafka", "Linux"]
+        period: "Apr 2024 — Jul 2024",
+        role: "Core Banking Systems Training (Temenos Transact)",
+        company: "PT Fortress Data Services",
+        location: "Jakarta Pusat, ID",
+        description: "Specialized in Temenos Transact core banking modules (Customer Management, Accounts, Teller, Loan Management, General Ledger, T24/jBASE, and FinCloud platform).",
+        technologies: ["Temenos T24", "jBASE", "FinCloud", "Banking Architecture"]
       },
       {
-        period: "2018 — 2021",
-        role: "Software Solutions Engineer",
-        company: "CloudCore Systems",
-        location: "Remote",
-        description: "Built tailored operational platforms, database migration pipelines, and automated IoT access control networks.",
-        technologies: ["TypeScript", "Python", "SQL", "MQTT", "Docker"]
+        period: "Jul 2023 — Apr 2024",
+        role: "IT Support & Infrastructure",
+        company: "PT. Buana Megah Paper Mills",
+        location: "Pasuruan, ID",
+        description: "Maintained mission-critical server hardware, enterprise LAN network infrastructure, CCTV systems, and minimized operational downtime.",
+        technologies: ["Servers", "LAN Infrastructure", "Hardware Maintenance", "Troubleshooting"]
+      },
+      {
+        period: "Mar 2021 — Aug 2022",
+        role: "IT Support & Systems",
+        company: "PT. Best Profit Futures",
+        location: "Surabaya, ID",
+        description: "Delivered continuous network and systems support, software troubleshooting across departments, and web optimization.",
+        technologies: ["Network Routing", "Systems Maintenance", "Web Optimization"]
       }
     ]
   },
@@ -124,42 +128,41 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       id: "backend",
-      name: "Core & Backend",
+      name: "Backend Frameworks & Languages",
       items: [
-        { name: "Node.js & TypeScript", description: "Strict typing, event loop optimization, and modular runtime systems", tags: ["Runtime", "Core"] },
-        { name: "Go (Golang)", description: "High-throughput concurrent daemons and cryptographic utilities", tags: ["Systems", "Microservices"] },
-        { name: "REST & GraphQL APIs", description: "Stateless contract-first APIs with predictable error hierarchies", tags: ["API", "Integration"] },
-        { name: "Fastify & Express", description: "Low-overhead HTTP services with schema validation", tags: ["Frameworks", "HTTP"] }
+        { name: "Kotlin & Spring Boot 3", description: "Core financing, BUMN enterprise applications, and REST APIs", tags: ["Kotlin", "Spring Boot"] },
+        { name: "Java & C#", description: "Object-oriented architectures and enterprise server services", tags: ["Java", "C#"] },
+        { name: "NodeJS, NestJS & Express", description: "High-concurrency asynchronous microservices and API gateways", tags: ["Node.js", "NestJS"] },
+        { name: "PHP & Laravel", description: "Rapid domain modeling, MVC services, and web applications", tags: ["PHP", "Laravel"] }
       ]
     },
     {
       id: "architecture",
-      name: "Architecture & Data",
+      name: "Databases & Event Streaming",
       items: [
-        { name: "PostgreSQL 16", description: "Complex indexing, foreign tables, JSONB queries, and partitioning", tags: ["RDBMS", "Storage"] },
-        { name: "TypeORM & SQL", description: "Zero-decorator inference, migrations, and transactional isolation", tags: ["ORM", "Data Access"] },
-        { name: "Redis & Caching", description: "Atomic rate-limiting, pub/sub, distributed locks, and session stores", tags: ["Cache", "Key-Value"] },
-        { name: "Event-Driven & Messaging", description: "Audit sink architecture, message brokering, and outbox patterns", tags: ["PubSub", "Streaming"] }
+        { name: "PostgreSQL & MySQL", description: "Complex relational schemas, transactional isolation, and query tuning", tags: ["PostgreSQL", "MySQL"] },
+        { name: "Apache Kafka", description: "Event-driven asynchronous messaging and credit pipeline queues", tags: ["Kafka", "PubSub"] },
+        { name: "Redis Caching", description: "In-memory caching, rate-limiting, and distributed locking", tags: ["Redis", "In-Memory"] },
+        { name: "Microsoft SQL Server", description: "Enterprise relational database administration and stored procedures", tags: ["MSSQL", "RDBMS"] }
       ]
     },
     {
       id: "infrastructure",
-      name: "Infra & Security",
+      name: "DevOps, Infra & Banking",
       items: [
-        { name: "Docker & Containerization", description: "Multi-stage reproducible builds and micro-service topologies", tags: ["DevOps", "Isolation"] },
-        { name: "Linux & On-Premises", description: "Systemd service daemons, network routing, and edge deployment", tags: ["OS", "Hardware"] },
-        { name: "Licensing & Cryptography", description: "HMAC signatures, monotonic timestamp watermarks, and challenge-response", tags: ["Security", "Integrity"] },
-        { name: "Git & CI/CD Pipelines", description: "Automated regression testing, linting, and semantic deployment", tags: ["Workflow", "Automation"] }
+        { name: "Docker & Kubernetes (RKE)", description: "Containerized deployment in enterprise cluster environments", tags: ["Docker", "Kubernetes"] },
+        { name: "GitLab CI/CD & Git", description: "Automated test pipelines, version control, and team collaboration", tags: ["GitLab", "CI/CD"] },
+        { name: "Linux / Ubuntu", description: "Server administration, systemd service daemons, and bash scripting", tags: ["Linux", "OS"] },
+        { name: "Temenos Transact & T24", description: "Core banking modules: Accounts, Teller, Loans, GL, and FinCloud", tags: ["Banking", "T24"] }
       ]
     },
     {
       id: "frontend",
-      name: "Frontend & UI Engineering",
+      name: "Full-Stack, UI & Design",
       items: [
-        { name: "React 18 & Vite", description: "Clean declarative interfaces, hooks, state machines, and fast bundling", tags: ["SPA", "Client"] },
-        { name: "Editorial & Modern CSS", description: "Viewport-bound responsive layouts, fluid clamp typography, and micro-interactions", tags: ["Styling", "Design"] },
-        { name: "Accessibility & Standards", description: "Semantic HTML5, ARIA landmarks, keyboard focus flows, and contrast", tags: ["a11y", "Quality"] },
-        { name: "Vitest & Playwright", description: "Automated regression testing, contract validation, and sub-100ms TTI suites", tags: ["Testing", "Speed"] }
+        { name: "TypeScript & JavaScript", description: "Modern full-stack web applications and client interfaces", tags: ["TypeScript", "JS"] },
+        { name: "HTML5, CSS3 & Responsive UI", description: "Modern responsive web applications and terminal dashboards", tags: ["Web", "CSS"] },
+        { name: "Figma, Photoshop, Illustrator", description: "UI design, wireframing, and vector graphics production", tags: ["Design", "Figma"] }
       ]
     }
   ]

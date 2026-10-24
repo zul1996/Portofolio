@@ -904,6 +904,23 @@ a {
   background-size: 100% 24px;
 }
 
+.terminal-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: #040705;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #142E1F;
+  border-radius: 3px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: #22C55E;
+}
+
 .terminal-command-line {
   display: flex;
   align-items: center;
