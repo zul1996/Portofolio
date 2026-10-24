@@ -673,11 +673,11 @@ a {
 }
 
 .terminal-main-name {
-  font-size: clamp(44px, 5.2vw, 68px);
+  font-size: clamp(30px, 3.6vw, 48px);
   font-weight: 700;
   color: #FFFFFF;
-  letter-spacing: -0.035em;
-  line-height: 1.02;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
   margin-bottom: 6px;
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Geist', sans-serif;
   text-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
@@ -810,6 +810,58 @@ a {
 .text-highlight {
   color: #00FF9D;
   font-weight: 600;
+}
+
+.direct-contact-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 2px 0;
+}
+
+.contact-channel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(8, 14, 11, 0.85);
+  border: 1px solid #163824;
+  color: #DCFCE7;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) ease;
+  text-decoration: none;
+}
+
+.contact-channel-pill:hover {
+  border-color: #00FF9D;
+  color: #00FF9D;
+  background: rgba(0, 255, 157, 0.08);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+  transform: translateY(-1px);
+}
+
+.contact-copy-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 255, 157, 0.08);
+  border: 1px solid rgba(0, 255, 157, 0.35);
+  color: #00FF9D;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.contact-copy-icon-btn:hover {
+  background: #00FF9D;
+  color: #050807;
+  box-shadow: 0 0 12px rgba(0, 255, 157, 0.4);
 }
 
 .terminal-sys-meta {

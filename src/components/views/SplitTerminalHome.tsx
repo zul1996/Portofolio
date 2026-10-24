@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import { ViewId } from '../../types';
 import { portfolioData } from '../../data/portfolio';
 import { InteractiveTerminal } from '../InteractiveTerminal';
-import { FileText, Send, Activity, ExternalLink } from 'lucide-react';
+import { 
+  FileText, 
+  Send, 
+  Activity, 
+  ExternalLink, 
+  Mail, 
+  Check, 
+  Copy 
+} from 'lucide-react';
+import { IconGithub, IconLinkedin } from '../Icons';
 
 interface SplitTerminalHomeProps {
   activeView: ViewId;
@@ -13,14 +22,33 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
   activeView,
   onNavigate
 }) => {
-  const { personal } = portfolioData;
+  const { personal, social } = portfolioData;
   const [terminalTrigger, setTerminalTrigger] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
   const handleActionClick = (targetView: ViewId, customCommand?: string) => {
     if (customCommand) {
       setTerminalTrigger(customCommand);
     }
     onNavigate(targetView);
+  };
+
+  const handleContactDirect = () => {
+    navigator.clipboard.writeText(personal.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    });
+    handleActionClick('contact', './init_contact.sh --address zul.indranto@gmail.com');
+    // Open mail client directly
+    window.location.href = `mailto:${personal.email}?subject=Backend%20Engineering%20/%20Architecture%20Inquiry`;
+  };
+
+  const handleCopyOnly = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(personal.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    });
   };
 
   const handleViewResume = () => {
@@ -40,7 +68,7 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
             <span className="sys-status-text">SYSTEM.STATUS: ONLINE</span>
           </div>
 
-          {/* 2. Main Name Headline */}
+          {/* 2. Full Name Headline: Muhammad Zulkarnaen Indranto */}
           <h1 className="terminal-main-name">
             {personal.name}
           </h1>
@@ -68,13 +96,14 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
           </div>
         </div>
 
-        {/* 6. Action Command Buttons (init_contact, view_resume, inspect_stack) */}
+        {/* 6. Quick Action Command Buttons */}
         <div className="terminal-actions-group">
           <div className="actions-buttons-row">
             <button
               className="term-btn-primary"
-              onClick={() => handleActionClick('contact', './init_contact.sh --address zul.indranto@gmail.com')}
-              aria-label="Initialize Contact Sequence"
+              onClick={handleContactDirect}
+              aria-label="Direct Contact via Email"
+              title="Click to copy email and open mail client"
             >
               <Send size={13} />
               <span>init_contact()</span>
@@ -84,6 +113,7 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
               className="term-btn-secondary"
               onClick={handleViewResume}
               aria-label="View Career Resume PDF"
+              title="Open full PDF CV in new tab"
             >
               <FileText size={13} />
               <span>view_resume<span className="text-highlight">.pdf</span></span>
@@ -100,8 +130,58 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
             </button>
           </div>
 
+          {/* 7. Direct Clickable Contact Channels Strip */}
+          <div className="direct-contact-strip" role="region" aria-label="Direct Channels">
+            <a 
+              href={`mailto:${personal.email}?subject=Backend%20Engineering%20Inquiry`} 
+              className="contact-channel-pill"
+              title="Send Direct Email"
+            >
+              <Mail size={12} color="#00FF9D" />
+              <span>{personal.email}</span>
+            </a>
+
+            <button 
+              onClick={handleCopyOnly} 
+              className="contact-copy-icon-btn" 
+              title="Copy Email to Clipboard"
+              aria-label="Copy Email"
+            >
+              {copied ? <Check size={11} color="#00FF9D" /> : <Copy size={11} />}
+              <span>{copied ? 'Copied!' : 'Copy'}</span>
+            </button>
+
+            {social.linkedin && (
+              <a 
+                href={social.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="contact-channel-pill"
+                title="Open LinkedIn Profile"
+              >
+                <IconLinkedin size={12} color="#00FF9D" />
+                <span>LinkedIn</span>
+                <ExternalLink size={10} style={{ opacity: 0.6 }} />
+              </a>
+            )}
+
+            {social.github && (
+              <a 
+                href={social.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="contact-channel-pill"
+                title="Open GitHub Profile"
+              >
+                <IconGithub size={12} color="#00FF9D" />
+                <span>GitHub</span>
+                <ExternalLink size={10} style={{ opacity: 0.6 }} />
+              </a>
+            )}
+          </div>
+
           <div className="terminal-sys-meta">
-            <span>{personal.email} &bull; Sidoarjo, Jawa Timur (UTC+07) &bull; 4+ Yrs Proven</span>
+            <span>Sidoarjo, Jawa Timur (UTC+07) &bull; 4+ Yrs Enterprise Experience &bull; Fast Response</span>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { PortfolioData } from '../types';
  */
 export const portfolioData: PortfolioData = {
   personal: {
-    name: "Muhammad Zulkarnaen",
+    name: "Muhammad Zulkarnaen Indranto",
     eyebrow: "IT PROFESSIONAL / BACKEND & INFRASTRUCTURE",
     title: "Backend Developer & IT Infrastructure Specialist",
     headline: "Building resilient enterprise backends. Powering national-scale distributed systems.",
