@@ -130,45 +130,50 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
   // Play script typing animation whenever activeView changes or terminalCommandTrigger fires
   useEffect(() => {
     let active = true;
+    let typeTimer: ReturnType<typeof setInterval> | null = null;
+    let lineTimer: ReturnType<typeof setInterval> | null = null;
+
     const script = TERMINAL_SCRIPTS[activeView];
     const fullCommand = terminalCommandTrigger || script.command;
-    const linesToOutput = script.lines;
+    const linesToOutput = script.lines || [];
 
     setDisplayedLines([]);
     setTypedCommand('');
     setIsTyping(true);
 
-    // Fast typing: 15ms per character
     let charIndex = 0;
-    const typeInterval = setInterval(() => {
+    typeTimer = setInterval(() => {
       if (!active) return;
       if (charIndex < fullCommand.length) {
         setTypedCommand(fullCommand.slice(0, charIndex + 1));
         charIndex++;
       } else {
-        clearInterval(typeInterval);
+        if (typeTimer) clearInterval(typeTimer);
 
-        // Stream lines quickly: 25ms per line
         let lineIndex = 0;
-        const lineInterval = setInterval(() => {
+        lineTimer = setInterval(() => {
           if (!active) return;
           if (lineIndex < linesToOutput.length) {
-            setDisplayedLines(prev => [...prev, linesToOutput[lineIndex]]);
+            const nextLine = linesToOutput[lineIndex];
+            if (nextLine !== undefined) {
+              setDisplayedLines(prev => [...prev, nextLine]);
+            }
             lineIndex++;
             if (terminalBodyRef.current) {
               terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
             }
           } else {
-            clearInterval(lineInterval);
+            if (lineTimer) clearInterval(lineTimer);
             setIsTyping(false);
           }
-        }, 25);
+        }, 22);
       }
     }, 12);
 
     return () => {
       active = false;
-      clearInterval(typeInterval);
+      if (typeTimer) clearInterval(typeTimer);
+      if (lineTimer) clearInterval(lineTimer);
     };
   }, [activeView, terminalCommandTrigger]);
 
@@ -177,7 +182,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
     if (isTyping) {
       const script = TERMINAL_SCRIPTS[activeView];
       setTypedCommand(terminalCommandTrigger || script.command);
-      setDisplayedLines(script.lines);
+      setDisplayedLines(script.lines || []);
       setIsTyping(false);
     }
   };
@@ -250,6 +255,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
         </div>
 
         {displayedLines.map((line, idx) => {
+          if (!line || typeof line !== 'string') return null;
           const isProgressBar = line.includes('███');
           const isHeading = line.startsWith('●') || line.startsWith('===');
           const isTag = line.startsWith('[') && line.endsWith(']');
