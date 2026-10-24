@@ -38,9 +38,8 @@ export const SplitTerminalHome: React.FC<SplitTerminalHomeProps> = ({
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     });
+    // Trigger terminal command typing effect only
     handleActionClick('contact', './init_contact.sh --address zul.indranto@gmail.com');
-    // Open mail client directly
-    window.location.href = `mailto:${personal.email}?subject=Backend%20Engineering%20/%20Architecture%20Inquiry`;
   };
 
   const handleCopyOnly = (e: React.MouseEvent) => {

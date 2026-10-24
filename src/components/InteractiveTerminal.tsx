@@ -215,40 +215,67 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
     setInputVal('');
     if (!cmd) return;
 
-    if (cmd === 'clear') {
+    if (cmd === 'clear' || cmd === 'cls') {
       setDisplayedLines([]);
       return;
     }
-    if (cmd.includes('about') || cmd.includes('cv') || cmd === '1') {
+    if (cmd === 'help') {
+      setDisplayedLines(prev => [
+        ...prev,
+        '> help',
+        'SYSTEM COMMAND MATRIX:',
+        '  github   / gh      - Open https://github.com/zul1996 in new tab',
+        '  linkedin / in      - Open LinkedIn profile in new tab',
+        '  resume   / pdf     - Open verified CV /resume.pdf in new tab',
+        '  01_cv    / about   - View full career experience & education',
+        '  02_stack / skills  - Audit backend frameworks & cloud tools',
+        '  03_proj  / systems - Inspect Jamkrindo, Nexus & Atharis engines',
+        '  04_comms / contact - Direct contact & copy zul.indranto@gmail.com',
+        '  00_boot  / home    - System initialization diagnostic',
+        '  clear              - Wipe terminal buffer'
+      ]);
+      return;
+    }
+    if (cmd === 'github' || cmd === 'gh') {
+      window.open('https://github.com/zul1996', '_blank');
+      setDisplayedLines(prev => [...prev, '> github', '>> Navigating to https://github.com/zul1996 in new tab...']);
+      return;
+    }
+    if (cmd === 'linkedin' || cmd === 'in') {
+      window.open('https://www.linkedin.com/in/muhammad-zulkarnaen-indranto/', '_blank');
+      setDisplayedLines(prev => [...prev, '> linkedin', '>> Navigating to LinkedIn profile in new tab...']);
+      return;
+    }
+    if (cmd === 'resume' || cmd === 'pdf' || cmd === 'cv.pdf') {
+      window.open('/resume.pdf', '_blank');
+      setDisplayedLines(prev => [...prev, '> view_resume.pdf', '>> Opening /resume.pdf in new tab...']);
+      return;
+    }
+    if (cmd === '01' || cmd === '1' || cmd.includes('about') || cmd === 'cv') {
       onNavigate('about');
       return;
     }
-    if (cmd.includes('skill') || cmd.includes('stack') || cmd === '2') {
+    if (cmd === '02' || cmd === '2' || cmd.includes('skill') || cmd.includes('stack')) {
       onNavigate('skills');
       return;
     }
-    if (cmd.includes('proj') || cmd.includes('system') || cmd === '3') {
+    if (cmd === '03' || cmd === '3' || cmd.includes('proj') || cmd.includes('system')) {
       onNavigate('projects');
       return;
     }
-    if (cmd.includes('contact') || cmd.includes('email') || cmd === '4') {
+    if (cmd === '04' || cmd === '4' || cmd.includes('contact') || cmd.includes('email') || cmd === 'mail') {
       onNavigate('contact');
       return;
     }
-    if (cmd === 'home' || cmd === 'help' || cmd === '0') {
+    if (cmd === '00' || cmd === '0' || cmd === 'boot' || cmd === 'home') {
       onNavigate('home');
-      return;
-    }
-    if (cmd.includes('resume') || cmd.includes('pdf')) {
-      window.open('/resume.pdf', '_blank');
-      setDisplayedLines(prev => [...prev, '> Opening /resume.pdf in new tab...']);
       return;
     }
 
     setDisplayedLines(prev => [
       ...prev,
       `> ${cmd}`,
-      `command not recognized: "${cmd}". Available commands: 00_boot, 01_cv, 02_stack, 03_projects, 04_contact, resume, clear`
+      `command not recognized: "${cmd}". Type "help" or try: github, linkedin, resume, 01, 02, 03, 04, clear`
     ]);
   };
 
@@ -306,7 +333,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="type help, 01, 02, 03, 04, resume, clear..."
+              placeholder="try: github, linkedin, resume, 01_cv, 02_stack, help, clear..."
               className="terminal-cli-input"
               autoFocus
               spellCheck={false}

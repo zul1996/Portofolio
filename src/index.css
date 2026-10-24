@@ -1051,8 +1051,9 @@ a {
 }
 
 .terminal-cli-input::placeholder {
-  color: #1E462E;
-  font-style: italic;
+  color: #4ADE80;
+  opacity: 0.65;
+  font-style: normal;
 }
 
 .home-left {
