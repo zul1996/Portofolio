@@ -97,36 +97,31 @@ a {
   height: 100dvh;
   display: flex;
   flex-direction: column;
-  padding: var(--shell-padding-y) var(--shell-padding-x);
-  background-color: var(--bg-primary);
+  padding: 0;
+  background-color: #bfe6e1;
   position: relative;
   overflow: hidden;
 }
 
 /* Outer subtle architectural grid line */
 .app-shell::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: var(--shell-padding-x);
-  right: var(--shell-padding-x);
-  height: 1px;
-  background: var(--border-light);
-  pointer-events: none;
-  opacity: 0.6;
+  display: none;
 }
 
 /* ==========================================================================
    HEADER
    ========================================================================== */
 .app-header {
-  height: 52px;
+  height: 56px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-light);
-  padding-bottom: 12px;
+  padding: 0 var(--shell-padding-x);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(24, 34, 28, 0.04);
   z-index: 20;
 }
 
@@ -297,10 +292,27 @@ a {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-light);
-  background: #FFFFFF;
-  box-shadow: 0 4px 24px -6px rgba(24, 34, 28, 0.04);
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.view-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: viewFadeIn var(--duration-normal) var(--ease-editorial) forwards;
+}
+
+.view-container:has(.projects-view),
+.view-container:has(.about-view),
+.view-container:has(.skills-view),
+.view-container:has(.contact-view) {
+  padding: var(--shell-padding-y) var(--shell-padding-x);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
 }
 
 .home-view {
@@ -1357,15 +1369,19 @@ a {
    FOOTER
    ========================================================================== */
 .app-footer {
-  height: 40px;
+  height: 42px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--border-light);
-  padding-top: 8px;
+  padding: 0 var(--shell-padding-x);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 -1px 12px rgba(24, 34, 28, 0.04);
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  z-index: 20;
 }
 
 .footer-left {
